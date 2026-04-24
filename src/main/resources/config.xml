@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <bean id = "student" class = "org.example.bean.Student" init-method="init" destroy-method="destroy" scope="prototype">
+<!--    <constructor-arg name="id" value = "202210216"/>-->
+<!--    <constructor-arg name = "name" value = "lynn"/>-->
+</bean>
+    <bean id = "teacher" class = "org.example.bean.Teacher" autowire="byType">
+        <!-- 属性注入 调用set方法-->
+<!--            <property name="id" value="202210216"/>-->
+<!--        <property name="name" value="lynn"/>-->
+<!--        <property name="student" ref="student"/>-->
+
+
+<!--            <constructor-arg name="id" value = "202210216"/>-->
+<!--            <constructor-arg name = "name" value = "lynn"/>-->
+<!--        <constructor-arg name = "student" ref = "student"/>-->
+<!--        构造器注入: 调用构造方法, 简单数据-->
+    </bean>
+</beans>
